@@ -1,9 +1,18 @@
 const express = require('express')
+const app = express()
 const cors = require('cors')
 require('dotenv').config()
 require('express-async-errors')
 
-const app = express()
+// DB
+const connectDB = require('./db/connect')
+
+// errors
+const notFoundMiddleware = require('./middleware/not-found')
+const errorMiddleware = require('./middleware/error-handler')
+
+// middleware
+app.use(express.json())
 
 app.get('/api/customers', cors(), (req, res) => {
 	const customers = [
@@ -15,6 +24,19 @@ app.get('/api/customers', cors(), (req, res) => {
 	res.json(customers)
 })
 
-const port = 5000
+app.use(notFoundMiddleware)
+app.use(errorMiddleware)
 
-app.listen(port, () => `Server running on port ${port}`)
+const port = process.env.PORT || 5000
+
+const start = async () => {
+	try {
+		// connect to DB
+		await connectDB(process.env.MONGO_URI)
+		app.listen(port, () => `Server running on port ${port}`)
+	} catch (err) {
+		console.log(err)
+	}
+}
+
+start()
