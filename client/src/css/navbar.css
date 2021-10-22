@@ -4,7 +4,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.2rem;
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -13,7 +12,7 @@
 .navbar-container {
 	display: flex;
 	justify-content: space-between;
-	height: 80px;
+	height: 100px;
 }
 
 .container {
@@ -24,6 +23,7 @@
 	margin-left: auto;
 	padding-right: 50px;
 	padding-left: 50px;
+	height: fit-content;
 }
 
 .navbar-logo {
@@ -31,7 +31,7 @@
 	justify-self: start;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 1rem;
 	display: flex;
 	align-items: center;
 }
@@ -65,20 +65,22 @@
 	align-items: center;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
-	height: 100%;
+	height: 50%;
+	font-size: 0.9rem;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .fa-bars {
 	color: #fff;
 }
 
-.menu-icon {
-	display: none;
-}
-
 @media screen and (max-width: 960px) {
 	.NavbarItems {
 		position: relative;
+	}
+
+	.code {
+		color: rgba(255, 255, 255, 0);
 	}
 
 	.nav-menu {
@@ -94,7 +96,7 @@
 	}
 
 	.nav-menu.active {
-		background: #1c2237;
+		background: rgba(1, 1, 1, 0);
 		left: 0;
 		opacity: 1;
 		transition: all 0.6s ease;
@@ -106,6 +108,7 @@
 		padding: 2rem;
 		width: 100%;
 		display: table;
+		font-size: 2rem large;
 	}
 
 	.nav-links:hover {
@@ -126,7 +129,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translate(25%, 50%);
+		transform: translate(15%, 10%);
 	}
 
 	.menu-icon {
@@ -140,7 +143,7 @@
 	}
 
 	.fa-times {
-		color: #fff;
+		color: rgb(255, 255, 255);
 		font-size: 2rem;
 	}
 
@@ -154,22 +157,38 @@
 }
 .code {
 	color: rgb(255, 255, 255);
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bold;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	transition: 0.5s ease-out;
 }
 .beyond {
 	color: #fff;
 }
 
 .icons {
-	background: #1c2237;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 5px;
+	text-decoration: none !important;
+	border-bottom-style: none;
 }
 
 .fi-icon {
 	color: #fff;
 	text-decoration: none;
+}
+
+.fa-items {
+	color: #fff;
+	size: 3.5rem;
+}
+
+.nav-menu-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	justify-content:flex-end;
 }

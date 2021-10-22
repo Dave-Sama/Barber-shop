@@ -15,19 +15,11 @@ function Navbar() {
 					<Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
 						<p className='code'>Dark Beard</p>
 					</Link>
-					<div className='menu-icon' onClick={handleClick}>
-						{click ? <FaTimes /> : <FaBars />}
-					</div>
 				</div>
 				<ul className={click ? 'nav-menu active' : 'nav-menu'}>
 					<li className='nav-item'>
 						<Link to='/' className='nav-links' onClick={closeMobileMenu}>
 							Home
-						</Link>
-					</li>
-					<li className='nav-item'>
-						<Link to='/skills' className='nav-links' onClick={closeMobileMenu}>
-							About Us
 						</Link>
 					</li>
 					<li className='nav-item'>
@@ -56,10 +48,17 @@ function Navbar() {
 						</Link>
 					</li>
 					<li className='nav-item'>
+						<Link to='/skills' className='nav-links' onClick={closeMobileMenu}>
+							About
+						</Link>
+					</li>
+					<li className='nav-item'>
 						<Link to='/courses' className='nav-links' onClick={closeMobileMenu}>
 							Contacts
 						</Link>
 					</li>
+				</ul>
+				<ul className='nav-menu-icons'>
 					<li className='icons'>
 						<Link to='/'>
 							<FiSearch className='fi-icon' />
@@ -69,6 +68,13 @@ function Navbar() {
 						<Link to='/'>
 							<FiShoppingCart className='fi-icon' />
 						</Link>
+					</li>
+					<li className='icons' onClick={handleClick}>
+						{click ? (
+							<FaTimes className='fa-items' />
+						) : (
+							<FaBars className='fa-items' />
+						)}
 					</li>
 				</ul>
 			</nav>
