@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { Link, BrowserRouter as Router } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { FiSearch, FiShoppingCart } from 'react-icons/fi'
-
+import logo from '../../static/logo.png'
 import '../../css/navbar.css'
+
 function Navbar() {
 	const [click, setClick] = useState(false)
 	const closeMobileMenu = () => setClick(false)
@@ -13,6 +14,7 @@ function Navbar() {
 			<nav className='navbar'>
 				<div className='navbar-container container'>
 					<Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+						<img src={logo} className='logo' />
 						<p className='code'>Dark Beard</p>
 					</Link>
 				</div>

@@ -1,6 +1,20 @@
+@font-face {
+	font-family: 'Chickens-Lovers';
+	src: url('../fonts/Chickens-Lovers.ttf');
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'Nomark';
+	src: url('../fonts/Nomark.otf');
+	font-style: normal;
+	font-weight: 100;
+}
+
 .navbar {
 	background: rgba(1, 1, 1, 0);
-	height: 80px;
+	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -9,16 +23,23 @@
 	z-index: 999;
 }
 
+.logo {
+	width: 50px;
+	height: auto;
+	filter: invert(100%);
+	-webkit-filter: invert(100%);
+}
+
 .navbar-container {
 	display: flex;
 	justify-content: space-between;
 	height: 100px;
+	width: 300px;
 }
 
 .container {
 	z-index: 1;
-	width: 100%;
-	max-width: 1300px;
+	max-width: 600px;
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 50px;
@@ -31,9 +52,9 @@
 	justify-self: start;
 	cursor: pointer;
 	text-decoration: none;
-	font-size: 1rem;
 	display: flex;
 	align-items: center;
+	height: 50px;
 }
 
 .navbar-icon {
@@ -43,15 +64,12 @@
 
 .nav-menu {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	list-style: none;
-	text-align: center;
-	justify-content: end;
+	flex-direction: row;
+	margin-right: 200px;
 }
 
 .nav-item {
-	height: 80px;
+	height: 50px;
 	border-bottom: 2px solid transparent;
 }
 
@@ -66,8 +84,7 @@
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	height: 50%;
-	font-size: 0.9rem;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: Nomark;
 }
 
 .fa-bars {
@@ -81,6 +98,7 @@
 
 	.code {
 		color: rgba(255, 255, 255, 0);
+		font-size: 100px;
 	}
 
 	.nav-menu {
@@ -90,46 +108,48 @@
 		height: 90vh;
 		position: absolute;
 		top: 80px;
-		left: -100%;
+		left: -110%;
 		opacity: 1;
-		transition: all 0.5s ease;
+		transition: all 0.8s ease;
 	}
 
 	.nav-menu.active {
 		background: rgba(1, 1, 1, 0);
 		left: 0;
 		opacity: 1;
-		transition: all 0.6s ease;
+		transition: all 0.8s ease;
 		z-index: 1;
 	}
 
 	.nav-links {
 		text-align: center;
-		padding: 2rem;
+		padding: 0.61rem;
 		width: 100%;
 		display: table;
-		font-size: 2rem large;
+		font-style: normal;
+		font-weight: 80;
+		font-size: 25px;
+		color: rgba(245, 245, 245, 0.95);
+		background-color: rgb(156, 156, 156);
+		border-bottom: #000000;
+		transition: all ease-in 0.4s;
 	}
 
 	.nav-links:hover {
-		color: #f00946;
-		transform: scale(1.2);
-		transition: all 0.3s ease;
-	}
-
-	.nav-item:hover {
-		border: none;
+		color: rgb(247, 159, 159);
+		background-color: rgba(245, 245, 245, 1);
 	}
 
 	.nav-item {
 		width: 100%;
+		font-family: Nomark;
 	}
 
 	.navbar-logo {
 		position: absolute;
 		top: 0;
 		left: 0;
-		transform: translate(15%, 10%);
+		transform: translate(10%, 5%);
 	}
 
 	.menu-icon {
@@ -154,12 +174,16 @@
 		width: 100%;
 		height: 120px;
 	}
+	.fa-items {
+		color: #fff;
+		size: 3.5rem;
+	}
 }
 .code {
 	color: rgb(255, 255, 255);
-	font-size: 25px;
+	font-size: 36px;
 	font-weight: bold;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: Nomark;
 	transition: 0.5s ease-out;
 }
 .beyond {
@@ -180,15 +204,10 @@
 	text-decoration: none;
 }
 
-.fa-items {
-	color: #fff;
-	size: 3.5rem;
-}
-
 .nav-menu-icons {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	text-align: center;
-	justify-content:flex-end;
+	justify-content: flex-end;
 }
