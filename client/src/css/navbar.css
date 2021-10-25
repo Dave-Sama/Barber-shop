@@ -13,7 +13,7 @@
 }
 
 .navbar {
-	background: rgba(1, 1, 1, 0);
+	background: rgba(1, 1, 1, 1);
 	height: 50px;
 	display: flex;
 	justify-content: center;
@@ -116,14 +116,16 @@
 	.nav-menu.active {
 		background: rgba(1, 1, 1, 0);
 		left: 0;
+		margin-bottom: 20px;
 		opacity: 1;
 		transition: all 0.8s ease;
 		z-index: 1;
+		overflow-y: auto;
 	}
 
 	.nav-links {
 		text-align: center;
-		padding: 0.61rem;
+		padding: 0.6111rem;
 		width: 100%;
 		display: table;
 		font-style: normal;
