@@ -16,12 +16,12 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-content: space-between;
 }
 
 .home-image {
 	background-size: 300px;
 	margin-top: 200px;
+	border-radius: 15%;
 }
 
 .header {
@@ -78,8 +78,28 @@
 }
 
 @media screen and (max-width: 960px) {
+	.home-container {
+		color: aliceblue;
+		font-family: 'Romelio';
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
 	.header {
 		margin-top: 4rem;
 		font-size: 35px;
+	}
+
+	.home-image {
+		width: 200px;
+		margin-top: 50px;
+		border-radius: 15%;
+	}
+	.part1 {
+		width: 100%;
+        margin-top: 50px;
+
 	}
 }
